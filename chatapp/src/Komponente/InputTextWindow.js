@@ -1,6 +1,8 @@
 import React from 'react';
 import InputText from './InputText';
 import PropTypes from 'prop-types'; 
+import '../App.css';
+
 
 
 export default class InputTextWindow extends React.Component {
@@ -23,14 +25,12 @@ export default class InputTextWindow extends React.Component {
 
     render () {
         return (
-            <div className='inputtext'>
-                <form onSubmit={this.handleSumbitMessage}>
+                <form className='inputtextwindow' onSubmit={this.handleSumbitMessage}>
                     <InputText 
                         text={this.state.textmessage}
                         handleTextInput={this.handleInputText}
                     />
                 </form>
-            </div>
         )
     }
 }

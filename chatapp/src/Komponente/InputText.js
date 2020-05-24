@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'; 
+import '../App.css';
+
 
 export default function InputText ({text, handleTextInput}) {
     return (
@@ -10,7 +12,7 @@ export default function InputText ({text, handleTextInput}) {
                 type='text'
                 onChange={handleTextInput}
             />
-            <button>Pošalji</button>
+            <button className='buttoninput'>Pošalji</button>
         </div>
     )
 }

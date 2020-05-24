@@ -1,10 +1,7 @@
 .App {
   text-align: center;
   height: 100vh;
-  width: 100vw;
 }
-
-
 
 .App-header {
   background-color: #282c34;
@@ -17,38 +14,67 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.windowmessage {
-  border: 1px solid black;
-  border-radius: 10px;
-  width: 60%;
-  height: 25%;
-  text-align: center;
-  margin: auto;
-}
-
-.inputtext {
-  margin: auto;
-  bottom: 30%;
-}
-
-.input {
-  width: 40%;
+.inputtextwindow {
+  width: 100%;
+  margin: 20px auto;
+  display: block;
 }
 
 .listmessage {
-  max-height: 25%;
-  max-width: 60%;
+  display: block;
+  padding: 20px 0;
+  width: 100%;
+  margin: 0 auto;
+  height: 70%; 
+  overflow: auto;
+}
+
+.head {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 50px;
+  margin: auto;
+}
+
+.userid {
+  color: #555d6d;
+  font-size: x-small;
+  display: block;
+  margin: 8px;
+}
+
+.messageuser {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.usertext {
+  padding: 5px;
+  max-width: 400px;
+  border-radius: 5px;
+  color: white;
+}
+
+.input {
+  width: 60%;
+  padding: 5px;
+  height: 35px;
+  border-radius: 8px;
+  border-color: brown;
+  font-size: 15px;
+}
+
+.buttoninput {
+  height: 35px;
+    width: 15%;
+    background-color: brown;
+    font-size: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    /* border: 4px double #cccccc; */
+    color: #ffffff;
+    /* padding: 10px; */
+    text-align: center;
+    cursor: pointer;
 }
