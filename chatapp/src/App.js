@@ -3,8 +3,6 @@ import './App.css';
 import {Input} from './Komponente';
 import MessagesList from './MessagesList';
 import {randomColor, randomName} from './Komponente/Useri';
-import 'regenerator-runtime/runtime';
-
 
 const a = randomName();
 const b = randomColor();
@@ -22,27 +20,35 @@ export default class App extends React.Component {
   }
 
   componentDidMount (){
+    
     this.drone = new window.Scaledrone('nPFtQQ9LLPaqNI2r', {
       data: this.state.user
+     
     });
-
+   
+    
     this.drone.on('open', error => {
       if (error) {
         return console.error(error);
       }
-      const user = {...this.state.user};
-      user.id = this.drone.clientId;
-      this.setState({user});
+      const useraddid = {...this.state.user};
+      useraddid.id = this.drone.clientId;
+      //console.log(useraddid)
+      this.setState({user: useraddid});
     });
 
 
     const room = this.drone.subscribe("observable-room");
-    room.on('message', message => {
-      const {data, member} = message;
     
-      const newm = { user: member, text: data};
+    room.on('message', message => {
+    
+     // console.log(message.member)
+      //console.log(message.data)
+
+      const newm = { user: message.member, text: message.data};
       const newlistm =[...this.state.messages, newm];
-   
+      //console.log(newlistm)
+     
       this.setState({messages: newlistm})
   })
 }
@@ -56,7 +62,7 @@ export default class App extends React.Component {
    
     this.drone.publish({
       room: "observable-room",
-      message: inputtext
+      message: inputtext,
     });
   }
 
@@ -66,8 +72,8 @@ export default class App extends React.Component {
       <h1 className='head'>My Chat App</h1>
          <MessagesList
              message={this.state.messages} 
-             user={this.state.user.name}
-             color={this.state.user.color} 
+             user={this.state.user}
+             //color={this.state.user.color} 
             />
         
       <Input 
