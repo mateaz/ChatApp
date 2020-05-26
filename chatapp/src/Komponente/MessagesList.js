@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'; 
-import './App.css';
+import '../App.css';
 
 let classname = '';
 
@@ -11,7 +11,7 @@ export default class MessagesList extends React.Component{
         <div className='listmessage'>     
         {this.props.message.map((mess, index) => {
            
-            console.log(mess)
+          //  console.log(mess)
             let currentUserId = mess.user.id;
             let userid = this.props.user.id
            
@@ -36,5 +36,5 @@ export default class MessagesList extends React.Component{
 
 MessagesList.propTypes = {
     message: PropTypes.array,
-    user: PropTypes.array
+    
 }

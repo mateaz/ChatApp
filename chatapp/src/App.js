@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import {Input} from './Komponente';
-import MessagesList from './MessagesList';
+import {Input, MessagesList} from './Komponente';
+//import MessagesList from './MessagesList';
 import {randomColor, randomName} from './Komponente/Useri';
 
 const a = randomName();
@@ -20,7 +20,6 @@ export default class App extends React.Component {
   }
 
   componentDidMount (){
-    
     this.drone = new window.Scaledrone('nPFtQQ9LLPaqNI2r', {
       data: this.state.user
      
@@ -42,14 +41,16 @@ export default class App extends React.Component {
     
     room.on('message', message => {
     
-     // console.log(message.member)
+      //console.log(message.member)
       //console.log(message.data)
 
       const newm = { user: message.member, text: message.data};
       const newlistm =[...this.state.messages, newm];
       //console.log(newlistm)
-     
+     //console.log(this.state.baba)
       this.setState({messages: newlistm})
+
+     
   })
 }
 
