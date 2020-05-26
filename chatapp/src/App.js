@@ -69,16 +69,18 @@ export default class App extends React.Component {
   render () {
   return (
     <div className='App'>
-      <h1 className='head'>My Chat App</h1>
+      <div className='window'>
          <MessagesList
              message={this.state.messages} 
              user={this.state.user}
              //color={this.state.user.color} 
             />
         
-      <Input 
-        OnMessageout={this.handleNewMessage}/>
+        <Input 
+          OnMessageout={this.handleNewMessage}/>
+      </div>
     </div>
+
   );
 }}
 

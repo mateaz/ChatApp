@@ -3,16 +3,6 @@
   height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 .inputtextwindow {
   width: 100%;
@@ -22,20 +12,17 @@
 
 .listmessage {
   display: block;
-  padding: 20px 0;
-  width: 100%;
+  padding: 20px;
+  width: 85%;
   margin: 0 auto;
-  height: 70%; 
+  height: 80%; 
   overflow: auto;
+  border: 2px solid rgb(141, 90, 90);
+  border-radius: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%236e0606' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
 }
 
-.head {
-  background-color: black;
-  color: white;
-  width: 100%;
-  height: 50px;
-  margin: auto;
-}
+
 
 .userid {
   color: #555d6d;
@@ -47,6 +34,9 @@
 .messageuser {
   display: block;
   margin-bottom: 15px;
+  padding-left: 20px;
+  margin-right: 20px;
+  
 }
 
 .usertext {
@@ -57,16 +47,18 @@
 }
 
 .input {
-  width: 60%;
+  width: 70%;
   padding: 5px;
   height: 35px;
   border-radius: 8px;
   border-color: brown;
+  background-color: brown;
+  color: #ffffff;
   font-size: 15px;
 }
 
 .buttoninput {
-  height: 35px;
+    height: 35px;
     width: 15%;
     background-color: brown;
     font-size: 15px;
@@ -85,4 +77,16 @@
 
 .left {
   text-align: left;
+}
+
+.window {
+    margin-left: 20px;
+    background-color: white;
+    margin-right: 20px;
+    padding: 20px;
+    box-shadow: 2px 2px;
+    border: 2px solid #6e0606;
+    border-radius: 12px;
+    height: 90%;
+    
 }

@@ -36,5 +36,5 @@ export default class InputTextWindow extends React.Component {
 }
 
 InputTextWindow.propTypes = {
-    messageout: PropTypes.string
+    OnMessageout: PropTypes.func
 }
